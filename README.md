@@ -1,6 +1,6 @@
 # PennyWise - Personal Finance Management App
 
-A beautiful and intuitive React Native mobile app for tracking expenses, managing budgets, and gaining financial insights.
+A React Native mobile app for tracking expenses, managing budgets, and gaining financial insights for coursera mobile app proffesional certificate.
 
 ## Features
 
@@ -24,267 +24,52 @@ A beautiful and intuitive React Native mobile app for tracking expenses, managin
 7. Reports & Analytics
 8. Profile & Settings
 
-## Tech Stack
+## Screenshots
 
-### Frontend
-- **React Native** - Mobile app framework
-- **Expo** - Development platform
-- **Expo Router** - File-based routing
-- **AsyncStorage** - Persistent data storage
-- **Context API** - State management (Auth & Theme)
-- **Axios** - HTTP client
-- **React Native Chart Kit** - Charts and visualizations
-- **Expo Vector Icons** - Icon library
-- **React Native Reanimated** - Animations
-- **Expo Notifications** - Push notifications support
+### Authentication & Onboarding
+<div align="center">
 
-### Backend
-- **Node.js** - Runtime environment
-- **Express** - Web framework
-- **JWT** - Authentication
-- **Bcrypt** - Password hashing
-- **JSON File Storage** - Simple data persistence
+| Splash Screen | Login | Home Dashboard |
+|:---:|:---:|:---:|
+| ![Splash](./screenshots/01-splash.png) | ![Login](./screenshots/02-login.png) | ![Home](./screenshots/04-home.png) |
+| Welcome screen with branding | Clean login interface | Balance overview & activity |
 
-## Design System
+</div>
 
-### Colors
-- **Primary**: #1B5E4F (Forest Green)
-- **Primary Light**: #D4EDE4 (Mint)
-- **Success/Income**: #10B981
-- **Error/Expense**: #EF4444
-- **Warning**: #F59E0B
+### Transactions & Activity
+<div align="center">
 
-### Typography
-- System fonts (San Francisco on iOS, Roboto on Android)
-- Font sizes: 12px - 36px
-- Font weights: Regular, Semibold, Bold
+| All Transactions | Expenses View |
+|:---:|:---:|
+| ![Activity All](./screenshots/05-activity-all.png) | ![Activity Expenses](./screenshots/06-activity-expenses.png) |
+| Complete transaction history | Filtered expense tracking |
 
-### Layout
-- Spacing: 4px, 8px, 12px, 16px, 20px, 24px, 32px
-- Border Radius: 8px, 12px, 16px, 20px, 24px
-- Input/Button Height: 52px
+</div>
 
-## Getting Started
+### Budgets & Financial Planning
+<div align="center">
 
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
-- Expo CLI
-- iOS Simulator (for iOS) or Android Emulator (for Android)
+| Budget Overview | Create Budget |
+|:---:|:---:|
+| ![Budgets](./screenshots/07-budgets.png) | ![Create Budget](./screenshots/08-create-budget.png) |
+| Track spending by category | Set budget limits & alerts |
 
-### Installation
+</div>
 
-1. **Install frontend dependencies:**
-```bash
-cd pennywise-app
-npm install
-```
+### Reports & Settings
+<div align="center">
 
-2. **Install backend dependencies:**
-```bash
-cd ../backend
-npm install
-```
+| Reports & Analytics | Settings (Dark) | Edit Profile |
+|:---:|:---:|:---:|
+| ![Reports](./screenshots/09-reports.png) | ![Settings](./screenshots/10-settings-dark.png) | ![Profile](./screenshots/11-edit-profile.png) |
+| Spending breakdown & insights | App preferences & security | Update profile information |
 
-### Running the App
-
-1. **Start the backend server:**
-```bash
-cd backend
-npm start
-```
-The API will run on `http://localhost:3000`
-
-2. **Update API URL in the app:**
-Edit `pennywise-app/context/AuthProvider.js` and update the `API_URL`:
-- For iOS Simulator: `http://localhost:3000/api`
-- For Android Emulator: `http://10.0.2.2:3000/api`
-- For Physical Device: `http://YOUR_COMPUTER_IP:3000/api`
-
-3. **Start the Expo development server:**
-```bash
-cd pennywise-app
-npm start
-```
-
-4. **Run on your device:**
-- Press `i` for iOS Simulator
-- Press `a` for Android Emulator
-- Scan QR code with Expo Go app for physical device
-
-## Project Structure
-
-```
-pennywise-app/
-├── app/                      # Expo Router screens
-│   ├── (auth)/              # Authentication screens
-│   │   ├── login.js
-│   │   ├── signup.js
-│   │   └── forgot-password.js
-│   ├── (tabs)/              # Main app tabs
-│   │   ├── index.js         # Home
-│   │   ├── activity.js      # Transactions
-│   │   ├── budgets.js
-│   │   ├── reports.js
-│   │   └── more.js          # Settings
-│   ├── transaction/
-│   │   └── add.js
-│   ├── _layout.js
-│   └── index.js             # Splash
-├── components/
-│   └── ui/                  # Reusable UI components
-│       ├── Button.js
-│       ├── Input.js
-│       └── Card.js
-├── constants/               # Design tokens
-│   ├── Colors.js
-│   ├── Layout.js
-│   └── Categories.js
-├── context/                 # React contexts
-│   ├── AuthProvider.js
-│   └── ThemeProvider.js
-├── assets/                  # Images, fonts, etc.
-├── app.json                 # Expo configuration
-├── babel.config.js
-└── package.json
-
-backend/
-├── server.js                # Express server
-├── data/
-│   └── db.json             # JSON database
-├── package.json
-└── README.md
-```
-
-## Key Features Explained
-
-### Authentication
-- JWT-based authentication
-- Secure password hashing with bcrypt
-- Session persistence with AsyncStorage
-- Auto-login on app launch
-
-### Theme System
-- Light and dark mode support
-- Sun/moon toggle icons
-- System theme detection
-- Persistent theme preference
-- Dynamic color schemes
-
-### Transaction Management
-- Add income and expenses
-- Category selection
-- Date and account tracking
-- Notes and descriptions
-- Transaction history with search and filters
-
-### Budget Management
-- Category-based budgets
-- Progress tracking
-- Visual progress bars
-- Budget alerts (80% and 100%)
-
-### Reports & Analytics
-- Pie charts for spending by category
-- Income vs expenses comparison
-- Net cash flow calculation
-- Period selection (monthly, custom)
-
-## API Endpoints
-
-### Authentication
-- `POST /api/auth/register` - Register new user
-- `POST /api/auth/login` - Login user
-- `GET /api/auth/me` - Get current user
-
-### Transactions
-- `GET /api/transactions` - Get all transactions
-- `POST /api/transactions` - Create transaction
-- `GET /api/transactions/:id` - Get transaction
-- `PUT /api/transactions/:id` - Update transaction
-- `DELETE /api/transactions/:id` - Delete transaction
-
-### Budgets
-- `GET /api/budgets` - Get all budgets
-- `POST /api/budgets` - Create budget
-
-### Categories
-- `GET /api/categories` - Get all categories
-
-### Stats
-- `GET /api/stats/overview` - Get financial overview
-
-## Testing
-
-### Test Accounts
-You can create test accounts through the sign-up screen. The app includes interactive validation testing:
-- Test invalid email format
-- Test weak password validation
-- Test required field validation
-
-## Performance Optimizations
-
-- ✅ Hermes JS engine enabled (Android)
-- ✅ Component memoization where needed
-- ✅ FlatList for virtualized scrolling
-- ✅ Image optimization
-- ✅ Minimal dependencies
-
-## Known Limitations
-
-1. **Backend**: Currently uses JSON file storage. For production, migrate to a proper database (PostgreSQL, MongoDB)
-2. **Notifications**: Expo Notifications is installed but not fully implemented
-3. **Transaction Details**: Detail view needs to be created
-4. **Image Upload**: Profile picture upload UI exists but needs backend implementation
-5. **Categories**: Category management UI needs to be created
-6. **Biometric Auth**: Toggle exists but needs implementation
-7. **Export Reports**: Export functionality needs implementation
-
-## Future Enhancements
-
-- [ ] Transaction detail view with edit/delete
-- [ ] Category management (add custom categories)
-- [ ] Recurring transactions
-- [ ] Bill reminders with notifications
-- [ ] Data export (PDF, CSV)
-- [ ] Multi-currency support
-- [ ] Bank account sync
-- [ ] Receipt scanning with OCR
-- [ ] Financial goals tracking
-- [ ] Savings challenges
-- [ ] Biometric authentication
-- [ ] Offline mode with sync
-
-## Troubleshooting
-
-### Backend Connection Issues
-- Make sure the backend server is running
-- Check the API_URL in AuthProvider.js
-- For Android Emulator, use `10.0.2.2` instead of `localhost`
-- For physical device, use your computer's IP address
-
-### Cannot Connect to Metro
-```bash
-# Clear cache and restart
-npx expo start --clear
-```
-
-### Build Errors
-```bash
-# Clean and reinstall
-rm -rf node_modules package-lock.json
-npm install
-```
-
-## License
-
-MIT License - Feel free to use this project for learning and development.
-
-## Credits
-
-Designed and developed based on comprehensive Figma designs.
-Built with React Native, Expo, and Node.js.
+</div>
 
 ---
 
-**Note**: This is a development/learning project. For production use, implement proper security measures, database management, and error handling.
+## License
+
+MIT License - Free for personal and learning use.
+
+---
