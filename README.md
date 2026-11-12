@@ -3,18 +3,16 @@
 A React Native mobile app for tracking expenses, managing budgets, and gaining financial insights for coursera mobile app proffesional certificate.
 
 ## Features
+- **Authentication** - Sign up, login, and secure session management
+- **Theme System** - Light and dark mode with persistent preferences
+- **Home Dashboard** - Overview of balance, income, expenses, and recent activity
+- **Transaction Management** - Add, view, and track income and expenses
+- **Reports & Analytics** - Visual charts showing spending patterns
+- **Budget Management** - Create and monitor category-based budgets
+- **Settings** - Manage preferences, appearance, and account settings
+- **Profile Management** - Update personal information
 
-### ✅ Implemented
-- 🔐 **Authentication** - Sign up, login, and secure session management
-- 🎨 **Theme System** - Light and dark mode with persistent preferences
-- 🏠 **Home Dashboard** - Overview of balance, income, expenses, and recent activity
-- 💰 **Transaction Management** - Add, view, and track income and expenses
-- 📊 **Reports & Analytics** - Visual charts showing spending patterns
-- 💳 **Budget Management** - Create and monitor category-based budgets
-- ⚙️ **Settings** - Manage preferences, appearance, and account settings
-- 🔔 **Profile Management** - Update personal information
-
-### 📱 Screens Implemented
+### Screens Implemented
 1. Splash Screen
 2. Login / Sign Up
 3. Home (Overview)
